@@ -1,4 +1,4 @@
 class Item < ApplicationRecord
     has_many :store_items
-    has_many :items, through: :store_item
+    has_many :stores, through: :store_items
 end
