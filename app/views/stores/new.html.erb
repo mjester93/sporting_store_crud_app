@@ -1,9 +1,11 @@
 <h1>Creating a New Store</h1>
 
-<%= form_for @store do |f| %>
-    <%= f.label "Store Name:" %>
-    <%= f.text_field :name %><br />
-    <%= f.label "Store City:" %>
-    <%= f.text_field :city %> <br />
-    <%= f.submit %>
-<% end %>
+<div>
+    <%= form_for @store do |f| %>
+        <%= f.label "Store Name:" %>
+        <%= f.text_field :name %><br />
+        <%= f.label "Store City:" %>
+        <%= f.text_field :city %> <br />
+        <%= f.submit %>
+    <% end %>
+</div>
