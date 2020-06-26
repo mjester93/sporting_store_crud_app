@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
     end
 
     def create
-        @item = Item.create(item_params(:name, :price, :sport))
+        @item = Item.create(item_params(:name, :price, :sport, :store_ids => []))
         redirect_to item_path(@item)
     end
 
@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
 
     def update        
         find_item         
-        @item.update(item_params(:name, :price, :sport))        
+        @item.update(item_params(:name, :price, :sport, :store_ids => []))        
         redirect_to item_path(@item)    
     end
 

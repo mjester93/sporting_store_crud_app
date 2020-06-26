@@ -7,7 +7,7 @@
         <%= f.label "Item Price:" %>
         <%= f.text_field :price %><br />
         <%= f.label "Item sport:" %>
-        <%= f.text_field :sport %> <br />
+        <%= f.select :sport, ["Football", "Basketball"]%> <br />
         <%= f.label "Select store:" %>
         <%= f.collection_check_boxes(:store_ids, Store.all, :id, :name) %><br />
         <br>

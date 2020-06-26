@@ -13,7 +13,7 @@ class StoresController < ApplicationController
     end
 
     def create
-        @store = Store.create(store_params(:name, :city))
+        @store = Store.create(store_params(:name, :city, :item_ids => []))
         redirect_to store_path(@store)
     end
 
@@ -23,7 +23,7 @@ class StoresController < ApplicationController
 
     def update      
         find_store         
-        @store.update(store_params(:name, :city))        
+        @store.update(store_params(:name, :city, :item_ids => []))        
         redirect_to store_path(@store)    
     end
 
