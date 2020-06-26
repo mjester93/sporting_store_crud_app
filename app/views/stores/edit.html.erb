@@ -1,0 +1,14 @@
+<h1>Edit a Store</h1>
+
+<div>
+    <%= form_for @store do |f| %>
+        <%= f.label "Store Name:" %>
+        <%= f.text_field :name %><br />
+        <%= f.label "Store City:" %>
+        <%= f.text_field :city %> <br />
+        <%= f.label "Select item to add:" %>
+        <%= f.collection_check_boxes(:item_ids, Item.all, :id, :name) %><br />
+        <br>
+        <%= f.submit %>
+    <% end %>
+</div>

@@ -17,11 +17,15 @@ class StoresController < ApplicationController
         redirect_to store_path(@store)
     end
 
-    def edit 
-    end
+    def edit       
+        find_store
+    end     
 
-    def update 
-    end 
+    def update      
+        find_store         
+        @store.update(store_params(:name, :city))        
+        redirect_to store_path(@store)    
+    end
 
     private
 
