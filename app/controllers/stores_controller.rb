@@ -17,6 +17,12 @@ class StoresController < ApplicationController
         redirect_to store_path(@store)
     end
 
+    def edit 
+    end
+
+    def update 
+    end 
+
     private
 
     def store_params(*args)
