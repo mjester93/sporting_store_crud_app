@@ -6,6 +6,7 @@
         <%= f.text_field :name %><br />
         <%= f.label "Store City:" %>
         <%= f.text_field :city %> <br />
+        <%= f.label "Jerseys:" %>
+        <%= f.collection_check_boxes(:item_ids, Item.all, :id, :name) %><br />
         <%= f.submit %>
     <% end %>
-</div>
